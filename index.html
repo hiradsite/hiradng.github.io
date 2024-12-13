@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hegaNG_browzer.net</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        #search-box {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #search-button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #4285f4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #search-button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <h1>hegaNG_browzer</h1>
+    <input type="text" id="search-box" placeholder="Search Google or type a URL"><br>
+    <button id="search-button" onclick="performSearch()">Search</button>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById('search-box').value;
+            if (query) {
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
+    <a href="a.js"></a>
+</body>
+</html>
